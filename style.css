@@ -4,7 +4,7 @@
 }
 body {
   font-family: "Merriweather", serif;
-  background-color: #f9fafc;
+  background-color: #ebf2ff;
 }
 .navbar {
   display: flex;
@@ -18,7 +18,7 @@ body {
 .navbar_logo {
   width: 100%;
 }
-.nav_item {
+.button_primary {
   background-image: linear-gradient(
     to right,
     #ff512f 0%,
@@ -31,24 +31,228 @@ body {
   border-radius: 6px;
   font-weight: 600;
 }
+.button_primary:hover {
+  cursor: pointer;
+  border: 2px solid #ff6767;
+}
+.container {
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+.hero_image_container {
+  width: 100%;
+}
+.hero_image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px -12px rgba(0 0 0/ 25%);
+}
+.hero_text {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 20px 0;
+  color: #1d3557;
+}
+food_card {
+  background-color: #f9f9f9;
+}
+.food_card_image_container {
+  width: 100%;
+}
+.food_image {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+}
+.food_card_description {
+  padding: 15px;
+}
+.explore_menu_text {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  margin: 20px 0;
+  color: #1d3557;
+}
+.food_description {
+  color: #1d3557;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.info_section {
+  margin-top: 70px;
+  align-items: center;
+}
+.updated {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  margin: 20px 0;
+  color: #1d3557;
+}
+.email {
+  height: 35px;
+  width: 220px;
+  border-radius: 5px;
+  color: #1d3557;
+  font-size: 18px;
+}
+.thought_section {
+  position: relative;
+  margin-top: 50px;
+  text-align: center;
+  color: white;
+}
+.thought_img {
+  width: 100%;
+  filter: brightness(40%);
+}
+.img_text_set {
+  position: absolute;
+  bottom: 70px;
+}
+.bottom_content {
+  margin-top: 70px;
+  justify-content: space-around;
+  display: flex;
+  position: relative;
+  color: #ebf2ff;
+  align-items: center;
+}
+.footer_gradient_bg {
+  padding: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
+  z-index: -3;
+}
+.bottom_links {
+  margin-top: 40px;
+}
+.bottom_links a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.bottom_links li {
+  padding: 5px;
+  list-style-type: none;
+  cursor: pointer;
+}
+.bottom_links a:hover {
+  color: #1d3557;
+}
 
-@media (min-width: 760px) {
+/* Media query */
+
+@media (min-width: 768px) {
+  .thought_img {
+    height: 300px;
+    width: 100%;
+    filter: brightness(40%);
+  }
+  .img_text_set {
+    position: absolute;
+    bottom: 135px;
+  }
+  .email {
+    margin-left: 220px;
+    width: 250px;
+  }
+  .explore_menu_lists {
+    margin-top: 60px;
+    display: flex;
+    gap: 15px;
+    padding: 0 30px;
+  }
+  .explore_menu_container {
+    position: relative;
+  }
+  .explore_menu_gradient_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      to right,
+      #ff512f 0%,
+      #dd2476 51%,
+      #ff512f 100%
+    );
+    z-index: -4;
+    transform: skew(-5deg);
+  }
+  #pizza_card {
+    margin-top: -20px;
+    margin-bottom: 30px;
+  }
   .navbar {
     justify-content: space-between;
     padding: 10px 40px;
   }
-
-  .nav_item:hover {
-    cursor: pointer;
-    border: 2px solid #ff6767;
+  .hero-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 20px;
   }
 }
 @media (min-width: 1024px) {
+  .email {
+    margin-left: 290px;
+    width: 300px;
+  }
+  .explore_menu_lists {
+    gap: 25px;
+    padding: 0 30px;
+  }
+  .container {
+    max-width: 70%;
+  }
   .navbar_brand {
     width: 150px;
   }
-  .nav_item {
+  .button_primary {
     padding: 18px;
     font-size: 18px;
+  }
+  .hero_description {
+    width: 100%;
+  }
+  .hero_text {
+    font-size: 40px;
+  }
+  explore_menu_text {
+    font-size: 48px;
+  }
+  .explore_menu_container {
+    position: relative;
+  }
+  .explore_menu_gradient_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      to right,
+      #ff512f 0%,
+      #dd2476 51%,
+      #ff512f 100%
+    );
+    z-index: -3;
+    transform: skew(-5deg);
   }
 }
